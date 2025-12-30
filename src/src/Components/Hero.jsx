@@ -1,36 +1,30 @@
 import { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from 'antd';
 
 export default function Carousel() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [touchStartX, setTouchStartX] = useState(null);
-  const intervalRef = useRef(null); // Store interval ID
+  const intervalRef = useRef(null);
+  const navigate = useNavigate();
   
   const slides = [
     { 
       title: "ELFAERA Eyelids — Preorders Open", 
-      text: "Hand-made by Earlf. Perfect fitment. Limited quantity.", 
+      text:  "Batch 01 — now available.", 
       cta: "Buy Now", 
       align: "left",
       image: "/src/assets/IMG_2793.PNG"
     },
     { 
       title: "ELFAERA Eyelids — Preorders Open", 
-      text: "Hand-made by Earlf. Perfect fitment. Limited quantity.", 
+      text: "Batch 01 — now available.", 
       cta: "Buy Now", 
       align: "center",
       image: "/src/assets/IMG_2795.PNG"
     },
-    // { 
-    //   title: "ELFAERA Eyelids — Preorders Open", 
-    //   text: "Hand-made by Earlf. Perfect fitment. Limited quantity.", 
-    //   cta: "Buy Now", 
-    //   align: "right",
-    //   image: "/src/assets/IMG_2809.PNG"
-    // }
   ];
 
-  // Function to reset the timer
   const resetTimer = () => {
     if (intervalRef.current) {
       clearInterval(intervalRef.current);
@@ -40,10 +34,8 @@ export default function Carousel() {
     }, 7000);
   };
 
-  // Start timer on mount
   useEffect(() => {
-    resetTimer(); // Start initial timer
-    
+    resetTimer();
     return () => {
       if (intervalRef.current) {
         clearInterval(intervalRef.current);
@@ -68,7 +60,7 @@ export default function Carousel() {
       } else {
         setActiveIndex((prev) => (prev - 1 + slides.length) % slides.length);
       }
-      resetTimer(); // Reset timer after swipe
+      resetTimer();
     }
     
     setTouchStartX(null);
@@ -79,6 +71,10 @@ export default function Carousel() {
     resetTimer();
   };
 
+  const handleBuyNowClick = () => {
+   navigate('/product');
+  }
+
   return (
     <div 
       className="relative w-full overflow-hidden select-none"
@@ -86,24 +82,23 @@ export default function Carousel() {
       onTouchEnd={handleTouchEnd}
     >
       {/* Carousel slides */}
-      <div className="relative h-[95vh] w-[100vw]">
+      <div className="relative h-[96vh] w-[100vw]">
         {slides.map((slide, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${index === activeIndex ? 'opacity-100' : 'opacity-0'}`}
+            className={`absolute inset-0 transition-opacity duration-1000 ${
+              index === activeIndex 
+                ? 'opacity-100 pointer-events-auto' 
+                : 'opacity-0 pointer-events-none'
+            }`}
           >
-            {/* Background image */}
             <img
              src={slide.image}
              alt={slide.title}
              className="absolute inset-0 w-full h-full object-cover md:object-cover"
              aria-hidden="true"
             />
-            
-            {/* Dark overlay for text readability */}
             <div className="absolute inset-0 bg-black/40"></div>
-            
-            {/* Content */}
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
                 <div className={`max-w-2xl ${
@@ -113,7 +108,9 @@ export default function Carousel() {
                   <h1 className="text-4xl font-bold text-white">{slide.title}</h1>
                   <p className="mt-4 text-lg text-gray-200">{slide.text}</p>
                   <div className="mt-6">
-                    <Button type="primary" size="large" href="#">{slide.cta}</Button>
+                    <Button type="primary" size="large" onClick={handleBuyNowClick}>
+                      {slide.cta}
+                    </Button>
                   </div>
                 </div>
               </div>
