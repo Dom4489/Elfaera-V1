@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
 import { useNavigate } from 'react-router-dom';
-import { addToCart } from '../redux/cart/cartSlice';
 import { useSelector, useDispatch } from 'react-redux'
+import { addToCart } from '../redux/cart/cartSlice';
 import ImageCarousel from '../Components/ProductInfoCarousel';
 
 export default function ProductInfo() {
@@ -17,7 +17,7 @@ export default function ProductInfo() {
   const baseProducts = [{
     id: 1,
     name: 'ELFAERA Eyelids',
-    price: 110, // Base price in CAD (number)
+    price: 123, // Base price in CAD (number)
     color: 'Black',
     // breadcrumbs: [
     //   { id: 1, name: 'Products', href: '/' },
@@ -77,12 +77,12 @@ export default function ProductInfo() {
     dispatch(addToCart({
       id: product.id,
       name: product.name,
-      basePrice: baseProducts[0].price, // Store the base CAD price (110)
+      basePrice: baseProducts[0].price, // Store the base CAD price ()
       quantity: 1,
       color: product.color,
       image: product.images[0].src,
     }));
-    navigate("/");
+    navigate("/store");
   }
 
   const handleBuyNow = (e) => {
@@ -139,10 +139,10 @@ export default function ProductInfo() {
                 type="button"
                 onClick={handleAddToCart}
                 disabled={hasItemsInCart}
-                className={`mt-10 flex w-full items-center justify-center rounded-md border border-transparent px-8 py-3 text-base font-medium text-white focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-hidden ${
+                className={`mt-10 flex w-full items-center justify-center rounded-md border border-blue px-8 py-3 text-base font-medium text-blue focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-hidden ${
                   hasItemsInCart 
                     ? 'bg-gray-400 cursor-not-allowed' 
-                    : 'bg-indigo-600 hover:bg-indigo-700'
+                    : 'hover:bg-blue-500 hover:text-white'
                 }`}
               >
                 Add to cart
@@ -157,7 +157,8 @@ export default function ProductInfo() {
               <button
                 type="button"
                 onClick={handleBuyNow}
-                className="mt-6 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:outline-hidden"
+                className="mt-6 flex w-full items-center justify-center rounded-md border border-transparent bg-blue-600 px-8 py-3 text-base font-medium text-white hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-hidden
+                hover:text-blue"
               >
                 {hasItemsInCart ? 'Go to checkout' : 'Buy now'}
               </button>

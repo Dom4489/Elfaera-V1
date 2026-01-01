@@ -3,11 +3,10 @@ import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/2
 const features = [
   {
     name: 'Who I am',
-    intro: "My name is Yuri. I’m a builder and designer, and I’ve now owned two ZN6s — I’ve completely fallen in love with this chassis. I genuinely believe this platform has a long future ahead of it, and my dream is to leave my mark on its history.",
+    intro: "My name is Yuri. I’m a builder and designer, and I’ve owned two ZN6s. I’ve completely fallen in love with this chassis and believe it has a long future ahead. My goal is to leave a meaningful mark on its history.",
     description: [
-      "My passion for design comes from my background as an undergraduate architecture student. Architecture trained the way I see things: proportion, surface, function, and how a form “sits” in real space — not just how it looks in a render. I bring that same mindset into every part I make: clean lines, intentional details, and fitment that respects the car’s original design language while pushing it forward.",
-      "Everything I build is the result of obsession-level iteration — scanning, modelling, test fitting, revising, and repeating until it feels right. I’m not here to make quick parts. I’m here to create pieces that feel like they belong, and to contribute something meaningful to the ZN6 community.",
-      "This is my way of giving back to the chassis that gave me so much — and the beginning of what I plan to be a long body of work."
+      "My design approach comes from my background in architecture, where I learned to focus on proportion, surface, and how forms exist in real space. I apply that same mindset to every part I make, aiming for clean lines, intentional details, and fitment that respects the car’s original design language.",
+      "Everything I build comes from constant iteration. I’m not here to make quick parts. I’m here to create pieces that feel like they belong.",
     ]
   },
   {
@@ -37,9 +36,9 @@ export default function About() {
                 What is Elfaera?
               </p>
               <p className="mt-6 text-lg/8 text-gray-700">
-              Elfaera is a small-batch automotive design studio focused on creating considered aero parts for the Toyota 86 / BRZ / FR-S platform.
-Every piece is designed around the car itself — scanned, modelled, tested, and refined to prioritise intent over excess.
-Elfaera is not mass production. It’s controlled releases, built carefully and released in runs.
+              Elfaera is a small-batch automotive design studio creating considered aero parts for the Toyota 86 / BRZ / FR-S platform. Every piece is designed around the car itself, scanned, modelled, tested, and refined to prioritise intent over excess.
+
+Elfaera is not mass production. Parts are released in controlled runs, built carefully and deliberately.
               </p>
               <div className="mt-10 max-w-xl space-y-8 text-base/7 text-gray-600 lg:max-w-none">
   {features.map((feature) => (

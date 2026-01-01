@@ -71,7 +71,7 @@ export default function Navbar() {
         </div>
 
         {/* Center - Logo (absolute centered) */}
-        <div className="absolute left-1/2 transform -translate-x-1/2">
+        <div className="absolute left-1/2 transform -translate-x-1/2 ml-3">
           <img src="/src/assets/JapaneseLogoElfaera.png" alt="Logo" className="h-10 w-auto" />
         </div>
         

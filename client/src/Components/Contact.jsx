@@ -149,7 +149,7 @@ export default function Contact() {
           <button
             type="submit"
             disabled={status === 'submitting'}
-            className="block w-full rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="block w-full rounded-md bg-blue-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-xs hover:bg-blue-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blueo-600 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {status === 'submitting' ? 'Sending...' : "Let's talk"}
           </button>

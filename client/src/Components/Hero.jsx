@@ -5,23 +5,36 @@ import { Button } from 'antd';
 export default function Carousel() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [touchStartX, setTouchStartX] = useState(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 735);
   const intervalRef = useRef(null);
   const navigate = useNavigate();
   
+  // Handle window resize
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 735);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const slides = [
     { 
       title: "ELFAERA Eyelids — Preorders Open", 
       text:  "Batch 01 — now available.", 
       cta: "Buy Now", 
       align: "left",
-      image: "/src/assets/IMG_2793.PNG"
+      desktopImage: "/src/assets/IMG_2793.PNG",
+      mobileImage: "/src/assets/first_half_dom.png"
     },
     { 
       title: "ELFAERA Eyelids — Preorders Open", 
       text: "Batch 01 — now available.", 
       cta: "Buy Now", 
       align: "center",
-      image: "/src/assets/IMG_2795.PNG"
+      desktopImage: "/src/assets/IMG_2795.PNG",
+      mobileImage: "/src/assets/second_half_dom.png"
     },
   ];
 
@@ -93,7 +106,7 @@ export default function Carousel() {
             }`}
           >
             <img
-             src={slide.image}
+             src={isMobile ? slide.mobileImage : slide.desktopImage}
              alt={slide.title}
              className="absolute inset-0 w-full h-full object-cover md:object-cover"
              aria-hidden="true"

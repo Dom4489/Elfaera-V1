@@ -24,7 +24,7 @@ export default function Products() {
         '/src/assets/blue eyelids.png',
       ],
       imageAlt: "ELFAERA Eyelids.",
-      price: 110,
+      price: 123,
       color: 'Black',
     },
     ]
