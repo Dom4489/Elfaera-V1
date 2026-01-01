@@ -24,19 +24,19 @@ export default function ProductInfo() {
     // ],
     images: [
       {
-        src: '/src/assets/Black Eyelid Photos2535.jpg',
+        src: '/images/Black Eyelid Photos2535.jpg',
         alt: 'Black Elfaera Eyelids.',
       },
       {
-        src: '/src/assets/Black Eyelid Photos2513.jpg',
+        src: '/images/Black Eyelid Photos2513.jpg',
         alt: 'Black Elfaera Eyelids.',
       },
       {
-        src: '/src/assets/Black Eyelid Photos2500.jpg',
+        src: '/images/Black Eyelid Photos2500.jpg',
         alt: 'Black Elfaera Eyelids.',
       },
       {
-        src: '/src/assets/Black Eyelid Photos2510.jpg',
+        src: '/images/Black Eyelid Photos2510.jpg',
         alt: 'Black Elfaera Eyelids.',
       },
     ],

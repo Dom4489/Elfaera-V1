@@ -29,7 +29,7 @@ function LogIn() {
     <div className="min-h-screen flex justify-center items-center">
       <div className="flex flex-col min-h-1/2 w-[80%] max-w-[30rem] items-center">
         <div className="w-32 h-32">
-          <img src="/src/assets/IMG_2948.PNG" alt="" />
+          <img src="/images/IMG_2948.PNG" alt="" />
         </div>
         <h2 className="tracking-tight font-bold text-xl mb-7 mt-[-2rem]">
           Elfaera 2026 Early Access

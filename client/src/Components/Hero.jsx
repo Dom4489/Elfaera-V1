@@ -25,16 +25,16 @@ export default function Carousel() {
       text:  "Batch 01 — now available.", 
       cta: "Buy Now", 
       align: "left",
-      desktopImage: "/src/assets/IMG_2793.PNG",
-      mobileImage: "/src/assets/first_half_dom.png"
+      desktopImage: "/images/IMG_2793.PNG",
+      mobileImage: "/images/first_half_dom.png"
     },
     { 
       title: "ELFAERA Eyelids — Preorders Open", 
       text: "Batch 01 — now available.", 
       cta: "Buy Now", 
       align: "center",
-      desktopImage: "/src/assets/IMG_2795.PNG",
-      mobileImage: "/src/assets/second_half_dom.png"
+      desktopImage: "/images/IMG_2795.PNG",
+      mobileImage: "/images/second_half_dom.png"
     },
   ];
 

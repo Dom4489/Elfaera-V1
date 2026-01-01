@@ -55,7 +55,7 @@ Elfaera is not mass production. Parts are released in controlled runs, built car
           </div>
           <img
             alt="About me"
-            src="/src/assets/Yuri.PNG"
+            src="/images/Yuri.PNG"
             className="w-full max-w-md mx-auto rounded-xl shadow-xl ring-1 ring-gray-400/10 object-cover"
           />
         </div>
