@@ -12,6 +12,7 @@ export default function ProductInfo() {
   const cartItems = useSelector((state) => state.cart.items);
   
   // Check if cart has items
+  // focus:ring-2 focus:ring-blue-500
   const hasItemsInCart = cartItems.length > 0;
   
   const baseProducts = [{
@@ -138,14 +139,14 @@ export default function ProductInfo() {
               <button
                 type="button"
                 onClick={handleAddToCart}
-                disabled={hasItemsInCart}
+                disabled={true}
                 className={`mt-10 flex w-full items-center justify-center rounded-md border border-blue px-8 py-3 text-base font-medium text-blue focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-hidden ${
                   hasItemsInCart 
                     ? 'bg-gray-400 cursor-not-allowed' 
-                    : 'hover:bg-blue-500 hover:text-white'
+                    : ''
                 }`}
               >
-                Add to cart
+                Sold out
               </button>
               
               {hasItemsInCart && (
@@ -154,14 +155,14 @@ export default function ProductInfo() {
                 </p>
               )}
 
-              <button
+              {/* <button
                 type="button"
                 onClick={handleBuyNow}
                 className="mt-6 flex w-full items-center justify-center rounded-md border border-transparent bg-blue-600 px-8 py-3 text-base font-medium text-white hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:outline-hidden
                 hover:text-blue"
               >
                 {hasItemsInCart ? 'Go to checkout' : 'Buy now'}
-              </button>
+              </button> */}
             </form>
           </div>
 

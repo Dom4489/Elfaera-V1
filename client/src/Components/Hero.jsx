@@ -21,17 +21,17 @@ export default function Carousel() {
 
   const slides = [
     { 
-      title: "ELFAERA Eyelids — Preorders Open", 
-      text:  "Batch 01 — now available.", 
-      cta: "Buy Now", 
+      title: "ELFAERA Eyelids — Preorders Closed", 
+      text:  "Batch 01 — Sold out.", 
+      cta: "Stay in the loop", 
       align: "left",
       desktopImage: "/images/IMG_2793.PNG",
       mobileImage: "/images/first_half_dom.png"
     },
     { 
-      title: "ELFAERA Eyelids — Preorders Open", 
-      text: "Batch 01 — now available.", 
-      cta: "Buy Now", 
+      title: "ELFAERA Eyelids — Preorders Closed", 
+      text:  "Batch 01 — Sold out.", 
+      cta: "Stay in the loop", 
       align: "center",
       desktopImage: "/images/IMG_2795.PNG",
       mobileImage: "/images/second_half_dom.png"
@@ -85,7 +85,8 @@ export default function Carousel() {
   };
 
   const handleBuyNowClick = () => {
-   navigate('/product');
+  //  navigate('/product');
+  window.location.href = 'https://www.instagram.com/elfaera.co/';
   }
 
   return (

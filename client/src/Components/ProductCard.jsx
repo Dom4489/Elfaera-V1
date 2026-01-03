@@ -70,6 +70,7 @@ export default function ProductCard({ product, onClick }) {
             </a>
           </h3>
           <p className="mt-1 text-sm text-gray-500">{product.color}</p>
+          <p className="mt-1 text-sm text-gray-500">Sold out</p>
         </div>
         <p className="text-sm font-medium text-gray-900">{product.price}</p>
       </div>
