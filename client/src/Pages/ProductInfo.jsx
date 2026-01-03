@@ -82,7 +82,7 @@ export default function ProductInfo() {
       color: product.color,
       image: product.images[0].src,
     }));
-    navigate("/store");
+    navigate("/");
   }
 
   const handleBuyNow = (e) => {

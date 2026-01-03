@@ -55,7 +55,7 @@ export default function CartProductCard() {
           <div className="flex items-start space-x-3">
             <img 
               className='h-20 w-20 flex-shrink-0 object-cover rounded' 
-              src={item.image || "/src/assets/Black Eyelid Photos2535.jpg"} 
+              src={item.image || "/images/Black Eyelid Photos2535.jpg"} 
               alt={item.name} 
             />
             <div className="flex-1 space-y-0.5">
